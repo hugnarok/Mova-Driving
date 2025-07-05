@@ -3,8 +3,6 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { HomeComponent } from './landingpage/home/home.component';
-import { DashboardComponent } from './dashboard/app/pages/dashboard/dashboard.component';
 
 import { RouterModule } from '@angular/router';
 
@@ -15,8 +13,6 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomeComponent,
-    DashboardComponent,
     RouterModule
   ],
   providers: [

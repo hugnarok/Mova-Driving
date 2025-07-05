@@ -36,6 +36,7 @@
               }
             ],
             "styles": [
+              "src/app/landingpage/global_styles.css",
               "src/styles.css",
               "src/app/dashboard/styles_deshboard.css"
             ],
@@ -95,6 +96,7 @@
               }
             ],
             "styles": [
+              "src/app/landingpage/global_styles.css",
               "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ]
