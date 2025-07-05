@@ -35,12 +35,13 @@ import { RouterModule } from '@angular/router';
       top: 0;
       left: 0;
       right: 0;
-      background: var(--header-bg);
+      background: #FFFFFF; /* Explicitly white background */
       backdrop-filter: blur(10px);
       z-index: 1000;
-      border-bottom: 1px solid var(--border-color);
+      border-bottom: 1px solid #E0E0E0; /* Lighter border */
       transition: all 0.3s ease;
       padding: 0.8rem 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Lighter shadow */
     }
 
     .nav {
@@ -50,15 +51,12 @@ import { RouterModule } from '@angular/router';
     }
 
     .logo h2 {
-      background: linear-gradient(135deg, #3A80F7, #6B3BEF);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: #333333; /* Explicitly dark color for visibility */
       font-size: 2.5rem;
       font-weight: 900;
       font-family: 'Poppins', sans-serif;
       letter-spacing: -0.02em;
-      text-shadow: 0 0 30px rgba(58, 128, 247, 0.3);
+      text-shadow: none; /* Remove text shadow */
     }
 
     .nav-links {
@@ -68,7 +66,7 @@ import { RouterModule } from '@angular/router';
     }
 
     .nav-link {
-      color: var(--text-primary);
+      color: #333333 !important; /* Explicitly dark color for visibility */
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s ease;
@@ -77,6 +75,7 @@ import { RouterModule } from '@angular/router';
 
     .nav-link:hover {
       color: #3A80F7;
+      transform: translateY(-2px); /* Added transform on hover */
     }
 
     .mobile-menu-toggle {
@@ -89,7 +88,7 @@ import { RouterModule } from '@angular/router';
     .mobile-menu-toggle span {
       width: 30px;
       height: 3px;
-      background: var(--text-primary);
+      background: #333333; /* Explicitly dark color for visibility */
       border-radius: 2px;
       transition: 0.3s;
     }

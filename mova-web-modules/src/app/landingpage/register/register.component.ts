@@ -63,7 +63,7 @@ import { FormsModule } from '@angular/forms';
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background-color: var(--bg-primary);
+      background-color: #0A0C16; /* Um tom mais escuro para o fundo */
       padding: 20px;
     }
 
@@ -72,7 +72,7 @@ import { FormsModule } from '@angular/forms';
       border-radius: 12px;
       padding: 3rem;
       border: 1px solid var(--border-color);
-      box-shadow: 0 10px 30px var(--shadow);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Sombra mais pronunciada */
       width: 100%;
       max-width: 450px;
       text-align: center;
@@ -108,7 +108,7 @@ import { FormsModule } from '@angular/forms';
       border: 1px solid var(--border-color);
       border-radius: 8px;
       background-color: var(--bg-secondary);
-      color: var(--text-primary);
+      color: #333333; /* Explicitly dark color */
       font-size: 1rem;
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
@@ -155,8 +155,8 @@ import { FormsModule } from '@angular/forms';
     }
 
     .btn-apple {
-      background-color: #000000;
-      color: white;
+      background-color: var(--text-primary); /* Use theme variable for background */
+      color: var(--bg-primary); /* Use theme variable for text color */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -169,13 +169,13 @@ import { FormsModule } from '@angular/forms';
     }
 
     .btn-apple:hover {
-      background-color: #333333;
+      background-color: var(--text-secondary); /* Adjust hover for theme */
     }
 
     .login-footer {
       margin-top: 2rem;
       font-size: 0.9rem;
-      color: var(--text-secondary);
+      color: #666666 !important; /* Explicitly dark color */
     }
 
     .register-footer a {

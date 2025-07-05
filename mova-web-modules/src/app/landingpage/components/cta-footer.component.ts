@@ -190,6 +190,7 @@ import { CommonModule } from '@angular/common';
 
     .footer-link:hover {
       color: #3A80F7;
+      transform: translateY(-2px); /* Added transform on hover */
     }
 
     .footer-bottom {

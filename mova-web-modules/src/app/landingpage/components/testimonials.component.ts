@@ -191,7 +191,7 @@ import { CommonModule } from '@angular/common';
       color: var(--text-primary);
       font-weight: 700;
       margin-bottom: 0.2rem;
-      font-size: 1.1rem;
+      font-size: 1.15rem; /* Adjusted font-size */
     }
 
     .badge-subtitle {

@@ -74,6 +74,11 @@ import { CommonModule } from '@angular/common';
       font-size: 2.2rem;
       color: white;
       box-shadow: 0 5px 15px rgba(58, 128, 247, 0.3);
+      transition: transform 0.3s ease; /* Added transition */
+    }
+
+    .step:hover .icon-circle {
+      transform: scale(1.1); /* Added scale on hover */
     }
 
     .step-number {

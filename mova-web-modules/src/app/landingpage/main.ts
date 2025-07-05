@@ -19,8 +19,8 @@ const routes: Routes = [
     RouterModule, // Import RouterModule for routing to work
   ],
   template: `
-    <div class="app">
-      <router-outlet></router-outlet> <!-- This is where routed components will be displayed -->
+    <div class="app theme-light">
+      <router-outlet></router-outlet>
     </div>
   `,
   styles: [`

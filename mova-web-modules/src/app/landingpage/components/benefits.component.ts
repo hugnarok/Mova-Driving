@@ -52,6 +52,11 @@ import { CommonModule } from '@angular/common';
       font-size: 1.8rem;
       color: white;
       box-shadow: 0 5px 15px rgba(58, 128, 247, 0.3);
+      transition: transform 0.3s ease; /* Added transition */
+    }
+
+    .benefit-card:hover .benefit-icon {
+      transform: scale(1.1); /* Added scale on hover */
     }
 
     .benefit-title {

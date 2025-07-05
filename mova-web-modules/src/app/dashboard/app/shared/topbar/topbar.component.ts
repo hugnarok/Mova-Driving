@@ -197,7 +197,7 @@ import { RouterModule } from '@angular/router';
 
     .profile-role {
       font-size: 0.8rem;
-      color: var(--text-muted);
+      color: rgba(255, 255, 255, 0.7); /* Slightly less opaque white for role */
     }
 
     @media (max-width: 768px) {

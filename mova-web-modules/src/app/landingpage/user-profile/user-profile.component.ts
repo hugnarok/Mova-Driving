@@ -28,7 +28,7 @@ import { CommonModule } from '@angular/common';
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background-color: var(--bg-primary);
+      background-color: #0A0C16; /* Um tom mais escuro para o fundo */
       padding: 20px;
     }
 
@@ -37,7 +37,7 @@ import { CommonModule } from '@angular/common';
       border-radius: 12px;
       padding: 3rem;
       border: 1px solid var(--border-color);
-      box-shadow: 0 10px 30px var(--shadow);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Sombra mais pronunciada */
       width: 100%;
       max-width: 600px;
       text-align: center;

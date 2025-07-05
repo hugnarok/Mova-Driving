@@ -51,124 +51,150 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule for ngModel
     </section>
   `,
   styles: [`
+    :host {
+      display: block;
+      font-family: 'Inter', sans-serif;
+    }
+
     .login-container {
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background-color: var(--bg-primary);
+      background-color: #0A0C16; /* Fundo mais escuro para contraste */
       padding: 20px;
+      box-sizing: border-box;
     }
 
     .login-card {
-      background: var(--bg-card);
-      border-radius: 12px;
-      padding: 3rem;
-      border: 1px solid var(--border-color);
-      box-shadow: 0 10px 30px var(--shadow);
+      background: var(--bg-card); /* Usar variável para o fundo do card */
+      border-radius: 16px; /* Bordas mais arredondadas */
+      padding: 3.5rem; /* Mais padding */
+      border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra mais elegante */
       width: 100%;
-      max-width: 450px;
+      max-width: 480px; /* Aumentar um pouco a largura máxima */
       text-align: center;
+      backdrop-filter: blur(5px); /* Efeito de desfoque no fundo do card */
+      -webkit-backdrop-filter: blur(5px);
     }
 
     .login-title {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.2rem; /* Título um pouco maior */
+      margin-bottom: 0.75rem;
       color: var(--text-primary);
+      font-weight: 700;
     }
 
     .login-subtitle {
-      font-size: 1rem;
+      font-size: 1.05rem;
       color: var(--text-secondary);
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem; /* Mais espaçamento */
+      line-height: 1.5;
     }
 
     .form-group {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.75rem; /* Mais espaçamento entre grupos */
       text-align: left;
     }
 
     .form-group label {
       display: block;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem; /* Espaçamento da label para o input */
       color: var(--text-primary);
       font-weight: 600;
+      font-size: 0.95rem;
     }
 
     .form-group input {
       width: 100%;
-      padding: 12px 15px;
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      background-color: var(--bg-secondary);
+      padding: 14px 18px; /* Mais padding nos inputs */
+      border: 1px solid rgba(255, 255, 255, 0.15); /* Borda mais visível */
+      border-radius: 10px; /* Bordas mais arredondadas */
+      background-color: rgba(255, 255, 255, 0.05); /* Fundo do input mais sutil */
       color: var(--text-primary);
       font-size: 1rem;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     }
 
     .form-group input:focus {
-      border-color: #3A80F7;
+      border-color: #3A80F7; /* Cor de foco vibrante */
       outline: none;
-      box-shadow: 0 0 0 3px rgba(58, 128, 247, 0.2);
+      background-color: rgba(255, 255, 255, 0.08); /* Fundo levemente mais claro no foco */
+      box-shadow: 0 0 0 4px rgba(58, 128, 247, 0.3); /* Sombra de foco mais suave */
     }
 
     .btn-full-width {
       width: 100%;
-      padding: 14px 24px;
-      font-size: 1.1rem;
-      margin-top: 1rem;
+      padding: 16px 24px; /* Mais padding no botão principal */
+      font-size: 1.15rem; /* Fonte um pouco maior */
+      margin-top: 1.5rem; /* Mais espaçamento */
+      border-radius: 10px; /* Bordas arredondadas */
+      font-weight: 700;
+      background-color: #3A80F7; /* Cor primária */
+      color: white;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-full-width:hover {
+      background-color: #2563eb; /* Tom mais escuro no hover */
+      transform: translateY(-2px); /* Efeito de "levantar" */
     }
 
     .social-login {
-      margin-top: 1.5rem;
-      margin-bottom: 1.5rem; /* Adicionado para espaçamento */
+      margin-top: 2rem; /* Mais espaçamento */
+      margin-bottom: 2rem;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 1.2rem; /* Mais espaçamento entre botões sociais */
+    }
+
+    .btn-google, .btn-apple {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px; /* Padding consistente */
+      border-radius: 10px; /* Bordas arredondadas */
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
     }
 
     .btn-google {
-      background-color: white;
-      color: #333; /* Cor do texto para contraste */
-      border: 1px solid var(--border-color); /* Adiciona borda para visibilidade */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease, border-color 0.3s ease;
+      background-color: #FFFFFF;
+      color: #1A1A1A; /* Cor de texto mais escura para contraste */
+      border: 1px solid #E0E0E0;
     }
 
     .btn-google:hover {
-      background-color: #e0e0e0; /* Cinza um pouco mais escuro para o hover */
+      background-color: #F0F0F0;
       border-color: #3A80F7;
+      transform: translateY(-2px);
     }
 
     .btn-apple {
-      background-color: #000000;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+      background-color: #1A1A1A; /* Fundo escuro para Apple */
+      color: #FFFFFF;
+      border: 1px solid #333333;
     }
 
     .btn-apple:hover {
       background-color: #333333;
+      border-color: #666666;
+      transform: translateY(-2px);
+    }
+
+    .social-login svg {
+      margin-right: 10px; /* Espaçamento do ícone */
     }
 
     .login-footer {
-      margin-top: 2rem;
-      font-size: 0.9rem;
+      margin-top: 2.5rem; /* Mais espaçamento */
+      font-size: 0.95rem;
       color: var(--text-secondary);
+      line-height: 1.5;
     }
 
     .login-footer a {
@@ -185,16 +211,42 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule for ngModel
 
     @media (max-width: 768px) {
       .login-card {
+        padding: 2.5rem;
+      }
+
+      .login-title {
+        font-size: 1.9rem;
+      }
+
+      .login-subtitle {
+        font-size: 0.95rem;
+      }
+
+      .btn-full-width {
+        font-size: 1.05rem;
+        padding: 14px 20px;
+      }
+
+      .social-login {
+        gap: 1rem;
+      }
+
+      .btn-google, .btn-apple {
+        padding: 12px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .login-card {
         padding: 2rem;
       }
 
       .login-title {
-        font-size: 1.75rem;
+        font-size: 1.7rem;
       }
 
-      .btn-full-width {
-        font-size: 1rem;
-        padding: 12px 20px;
+      .login-subtitle {
+        font-size: 0.9rem;
       }
     }
   `]

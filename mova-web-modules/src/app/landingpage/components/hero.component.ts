@@ -124,6 +124,11 @@ import { CommonModule } from '@angular/common';
     .stat {
       display: flex;
       flex-direction: column;
+      transition: transform 0.3s ease; /* Added transition */
+    }
+
+    .stat:hover {
+      transform: translateY(-5px); /* Added hover effect */
     }
 
     .stat-number {
